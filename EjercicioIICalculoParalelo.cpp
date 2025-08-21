@@ -64,7 +64,7 @@ int main() {
     for (int i = 0; i < std::min(n, 20); ++i) std::cout << arr[i] << (i+1< std::min(n,20)? ", ": "\n");
 
     // Preparar la partición equitativa del trabajo entre hilos
-    std::vector<int> partials(num_threads, 0);
+    std::vector<long long> partials(num_threads, 0);  // CAMBIADO: de int a long long
     std::vector<pthread_t> threads(num_threads);
     std::vector<ThreadArg> args(num_threads);
 
